@@ -25,17 +25,17 @@ export const options: NextAuthOptions = {
                 placeholder: "your-awesome-password"
             }
         },
-            async authorize(credentials) {
+        async authorize(credentials) {
 
-                // Add logic here to look up the user from the credentials supplied. USertable or database....
-                const user = { id: 42, name: "Test User",password: "password" }
+            // Add logic here to look up the user from the credentials supplied. USertable or database....
+            const user = { id: 42, name: "Test User",password: "password" }
 
-                if(credentials?.username === user.name && credentials?.password === user.password) {
-                    return user
-                } else {
-                    return null
-                }  
-            }
+            if(credentials?.username === user.name && credentials?.password === user.password) {
+                return user
+            } else {
+                return null
+            }  
+        }
         })
     ],
  

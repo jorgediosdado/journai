@@ -24,26 +24,28 @@ const WriteEntry: React.FC = () => {
       } else {
         alert('Error saving entry');
       }
-  
       setEntry('');
     };
 
   return (
-    <div>
-      <h1>Write Your Daily Entry</h1>
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={entry}
-          onChange={(e) => setEntry(e.target.value)}
-          rows={5}
-          cols={50}
-          placeholder="Write your daily entry here..."
-        />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+
+    <div className="container mx-auto mt-8">
+        <h1 className="text-3xl font-bold mb-4">Write Your Daily Entry</h1>
+        <form onSubmit={handleSubmit}>
+            <textarea
+            className="border border-gray-300 rounded-md p-2 w-full h-40"
+            value={entry}
+            onChange={(e) => setEntry(e.target.value)}
+            placeholder="Write your daily entry here..."
+            />
+            <button
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4"
+            type="submit"
+            >
+            Submit
+            </button>
+        </form>
+        </div>);
 };
 
 export default WriteEntry;

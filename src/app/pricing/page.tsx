@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth/next"
 export default async function Home() {
 
 
-    const session = await getServerSession({ options })
+    const session = await getServerSession(options)
     //Print the status of a session
     console.log(session)
     return (

@@ -36,7 +36,7 @@ const WriteEntry: React.FC = () => {
             className="border border-gray-300 rounded-md p-2 w-full h-40"
             value={entry}
             onChange={(e) => setEntry(e.target.value)}
-            placeholder="Write your daily entry here..."
+            placeholder="Write your daily entry here"
             />
             <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4"

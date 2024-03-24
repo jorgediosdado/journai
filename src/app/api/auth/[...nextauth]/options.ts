@@ -28,7 +28,7 @@ export const options: NextAuthOptions = {
         async authorize(credentials) {
 
             // Add logic here to look up the user from the credentials supplied. USertable or database....
-            const user = { id: 42, name: "Test User",password: "password" }
+            const user = { id: "42", name: "Test User", password: "password" } // id is now a string
 
             if(credentials?.username === user.name && credentials?.password === user.password) {
                 return user
@@ -36,7 +36,11 @@ export const options: NextAuthOptions = {
                 return null
             }  
         }
-        })
+        }
+        
+        )
     ],
  
 }
+
+
